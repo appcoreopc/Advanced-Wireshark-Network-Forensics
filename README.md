@@ -43,6 +43,48 @@ Attacking host
 FTP Server 
 192.168.56.1
 
+Objective 
+
+What causes the spike in FTP traffic? 
+
+What type of attack? 
+
+See alot or ARP - pretty sure it is port scan going on. Go to Statistic -> Converation 
+
+
+Use the filter = arp.opcode == 2 on wirewhark and hit enter
+- This is to 
+
+What are the results of those attacks? What types of attack
+
+## See network traffic activities
+
+!(arp)
+
+And verify that, there are various different port number appearing. This is an obvious sign that attacker trying to do a port scan
+
+## Acknowledgement that attacker received
+
+tcp.flags == 0x012
+
+You should see SYN, ACK for the following ports :-
+
+21 
+445 
+139
+135
+49154
+49152
+49155
+
+
+What event took place prior to the FTP Servier being taken offline
+
+
+
+
+
+
 
 
 
