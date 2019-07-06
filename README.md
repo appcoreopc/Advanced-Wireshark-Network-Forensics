@@ -31,4 +31,20 @@ ip.src == 12.183.1.55 && ( ip.addr == 192.168.0.0/16 || ip.addr == 192.168.0.0/1
 
 
 ## Scenario 2 
+Client network attack. 
+
+Denial of service attack against FTP 192.168.56.1
+
+FTP taken offline 
+
+Attacking host 
+192.168.56.101  
+
+FTP Server 
+192.168.56.1
+
+
+
+
+
 
