@@ -59,7 +59,7 @@ What are the results of those attacks? What types of attack
 
 ## See network traffic activities
 
-!(arp)
+> !(arp)
 
 And verify that, there are various different port number appearing. This is an obvious sign that attacker trying to do a port scan
 
@@ -88,13 +88,13 @@ You should see SYN, ACK for the following ports :-
 
 Use the following command :- 
 
-tcp.flags == 0x012 && (tcp.port == 21)
+> tcp.flags == 0x012 && (tcp.port == 21)
 
 
 
 ## Look only at FTP 
 
-tcp.port == 21
+> tcp.port == 21
 
 Right click and choose follow stream. We can see attacker trying to use brute force to login
 
@@ -104,9 +104,10 @@ Did they get in? Ftp login for success code for login successful is 230
 
 We want to see if the attacker has login successfully. 
 
-ftp.response.code == 230  
+> ftp.response.code == 230  
 
-And right click, and then choose 'Follow Stream' 
+And right click, and then choose 'Follow Stream'. Then click on the 'Srream' drop down button up. You can scroll through different types of network traffic capture data.
+
 
 
 
