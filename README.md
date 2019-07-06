@@ -5,8 +5,20 @@ If you've ever picked up a book on Wireshark or network monitoring, they almost 
 
 For scenario 1. 
 
-The commands uses in wireshark 
+1. Where did the user contracted the virus
 
+2. any malware files
+
+3. kinda of calls made to external sources
+It makes various call. Seems like the ones that responding via Pot 80
+
+4. did try to propogate
+No 
+
+
+The commands uses in wireshark
+
+To see traffic from 12.183.1.55 
 ip.addr == 12.183.1.55 
 
 Look for acknowledgement when a SYNC call was made. It should ideally return ACK. 
