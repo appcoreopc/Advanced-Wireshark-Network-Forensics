@@ -70,18 +70,43 @@ tcp.flags == 0x012
 You should see SYN, ACK for the following ports :-
 
 21 
+
 445 
+
 139
+
 135
+
 49154
+
 49152
+
 49155
 
 
+## FTP Attack trace 
+
+Use the following command :- 
+
+tcp.flags == 0x012 && (tcp.port == 21)
+
+
+
+## Look only at FTP 
+
+tcp.port == 21
+
+Right click and choose follow stream. We can see attacker trying to use brute force to login
+
 What event took place prior to the FTP Servier being taken offline
 
+Did they get in? Ftp login for success code for login successful is 230
 
+We want to see if the attacker has login successfully. 
 
+ftp.response.code == 230  
+
+And right click, and then choose 'Follow Stream' 
 
 
 
