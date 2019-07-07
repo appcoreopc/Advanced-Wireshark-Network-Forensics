@@ -15,19 +15,19 @@ It makes various call. Seems like the ones that responding via Pot 80
 4. did try to propogate
 No 
 
-
 The commands uses in wireshark
 
 To see traffic from 12.183.1.55 
 ip.addr == 12.183.1.55 
 
 Look for acknowledgement when a SYNC call was made. It should ideally return ACK. 
-ip.addr == 12.183.1.55 && !(tcp.stream == 5) && http.host
 
+Use the following command on wireshark's filter 
+
+> ip.addr == 12.183.1.55 && !(tcp.stream == 5) && http.host
 
 Internal network scanned, called 
-ip.src == 12.183.1.55 && ( ip.addr == 192.168.0.0/16 || ip.addr == 192.168.0.0/16 || ip.addr == 172.16.0.0/12 || ip.addr == 10.0.0.0/8  || ip.dst == 12.0.0.0/8)
-
+> ip.src == 12.183.1.55 && ( ip.addr == 192.168.0.0/16 || ip.addr == 192.168.0.0/16 || ip.addr == 172.16.0.0/12 || ip.addr == 10.0.0.0/8  || ip.dst == 12.0.0.0/8)
 
 
 ## Scenario 2 
@@ -65,7 +65,7 @@ And verify that, there are various different port number appearing. This is an o
 
 ## Acknowledgement that attacker received
 
-tcp.flags == 0x012
+> tcp.flags == 0x012
 
 You should see SYN, ACK for the following ports :-
 
