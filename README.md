@@ -61,6 +61,9 @@ What are the results of those attacks? What types of attack
 
 > !(arp)
 
+ARP is Address Resolution protocol which tend to retrieve ips from a dns name.
+
+
 And verify that, there are various different port number appearing. This is an obvious sign that attacker trying to do a port scan
 
 ## Acknowledgement that attacker received
@@ -88,9 +91,13 @@ You should see SYN, ACK for the following ports :-
 
 Use the following command :- 
 
+
 > tcp.flags == 0x012 && (tcp.port == 21)
 
 
+0x012 = SYNC / ACK 
+For more info, please refere to link below :- 
+http://rapid.web.unc.edu/resources/tcp-flag-key/
 
 ## Look only at FTP 
 
