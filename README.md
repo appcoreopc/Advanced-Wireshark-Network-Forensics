@@ -7,7 +7,8 @@ If you've ever picked up a book on Wireshark or network monitoring, they almost 
 
 1. Where did the user contracted the virus
 
-2. any malware files
+2. any malware files captured? If there are, we can generate hash and submit to virustotal. 
+
 
 3. kinda of calls made to external sources
 It makes various call. Seems like the ones that responding via Pot 80
